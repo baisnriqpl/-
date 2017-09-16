@@ -1,0 +1,5 @@
+<text class="time">{{time}}</text>
+<view>
+  <image src="../imgs/jkxw.jpg"></image>
+</view>
+ <view class="masked"><text class="start" bindtap='toPage'>开启你的健康之旅</text></view>

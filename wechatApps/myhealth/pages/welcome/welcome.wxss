@@ -1,0 +1,18 @@
+.time { display: block; width: 30px; height: 30px; border: 1px solid #BCBDBC; text-align: center; line-height: 30px; border-radius: 3px; font-size: 12px; position: fixed; right: 0; top: 0; }
+image { width: 350rpx; height: 350rpx; margin: 0 auto; display: block; margin-top: 150rpx; }
+.start { width: 300rpx; height: 30px; line-height: 30px; font-size: 14px; border: 1px solid #BCBDBC; border-radius: 5px; display: block; text-align: center; margin: 0 auto; margin-top: 50rpx; }
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+    .masked{
+
+        background: -webkit-linear-gradient(left, red, green 25%, blue 50%, orange 75%, pink);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: masked-animation 4s infinite linear;
+    }
+}
+@-webkit-keyframes masked-animation {
+    0%  { background-position: 0 0;}
+    100% { background-position: -100% 0;}
+}

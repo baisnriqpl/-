@@ -1,0 +1,116 @@
+<!--index.wxml-->
+<view class="container">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
+      <block wx:for="{{movies}}" wx:for-index="index">    
+        <swiper-item>    
+          <image src="{{item.imgurl}}" class="slide-image" mode="aspectFill"/>    
+        </swiper-item>    
+      </block>    
+    </swiper> 
+
+    <view class="icon-list">
+      <block wx:for="{{icons}}">
+      <view class="icons">
+        <text class="icon" style="background:url('{{item.imgurl}}') no-repeat; background-size: 100%;"></text>
+        <text class="icon-text">{{item.name}}</text>
+      </view>
+      </block>
+    </view>
+
+    <view class="health">
+      <image class="health-img" src="{{health.imgurl}}"></image>
+      <view class="health-message">
+          <scroll-view scroll-y="true" style="height: {{scrollHeight}}rpx;position:absolute;margin-top: {{scrollTop}}rpx;" bindscroll="scroll">
+            <block wx:for="{{health.roll}}">
+                <text class="health-roll"><text class="roll-title">{{item.title}}</text>{{item.content}}</text>
+            </block>
+          </scroll-view>
+      </view>
+    </view>
+
+    <view class="expand">
+        <image class="expand-imgl" src="{{expand.imgurl}}"></image>
+        <text class="line"></text>
+        <text class="title">
+          <text class="btitle">{{expand.goods[0].title}}</text>
+          <text class="stitle">{{expand.goods[0].stitle}}</text>
+        </text>
+        <image class="expand-goodsImg" src="{{expand.goods[0].imgurl}}"></image>
+    </view>
+
+    <view class="list">
+      <block wx:for="{{lists}}">
+        <view class="list-son">
+          <text style="background:url('{{item.imgurl}}') no-repeat;background-size: 100%;" class="list-imgs"></text>
+          <text style="background:url('{{item.goods.imgurl}}') no-repeat;background-size: 100%;" class="list-goods"></text>
+        </view>
+      </block>
+    </view>
+
+    <view class="selection">
+      <view class="subject">
+        <text class="green-icon"></text>
+        <text class="subject-title">精选专题</text>
+      </view>
+      <block wx:for="{{selection}}">
+        <view>
+           <view class="selection-banner" style="background:url('{{item.banner.image}}') no-repeat;background-size: 100% 100%;">
+            <view class="selection-son">
+              <text class="selection-title">{{item.banner.title}}</text>
+              <text class="selection-article">{{item.banner.article}}</text>
+            </view>
+           </view>
+           <text class="triangle"></text>
+            <scroll-view scroll-x="true" class="selection-goods">
+                <view class="goods" wx:for="{{item.goods}}">
+                  <text class="goods-img" style="background:url('{{item.default_image}}') no-repeat; background-size: 100%;"></text>
+                  <text class="goods-name">{{item.goods_name}}</text>
+                  <text class="goods-price">￥{{item.sale_price}}</text>
+                </view> 
+              </scroll-view>
+        </view>
+      </block>
+    </view>
+
+    <view class="place-title">
+        <text class="green-icon"></text>
+        <text class="subject-title">线下门店</text>
+        <text class="place-list" bindtap="showMap">{{showList ? '进入地图' : '查看店铺列表'}}</text>
+    </view>
+
+    <view class="address" wx:if="{{!showList}}">
+        <!-- <image class="search" src="../imgs/SearchIcon.png"></image> -->
+        <text class="nowlocation">当前位置</text>{{address}}
+    </view>
+    <view class="place" wx:if="{{!showList}}">
+        <map id="myMap" show-location markers="{{markers}}" longitude="{{longitude}}" latitude="{{latitude}}"/>
+        <text class="points" bindtap="includePoints"><text></text></text>
+    </view>
+
+      <view class="place-store" wx:if="{{showList}}">
+          <view class="order-title">
+            <text class="orderby">距离最近</text>
+            <text class="order-line"></text>
+            <text class="orderby">销量最好</text>
+            <text class="order-line"></text>
+            <text class="orderby">好评优先</text>
+          </view>
+          <text class="indica" bindtap="distance" style="{{distanceOpacity}}"><text class="indicatrix"></text></text>
+          <text class="indica" bindtap="sales" style="{{salesOpacity}}"><text class="indicatrix"></text></text>
+          <text class="indica" bindtap="praise" style="{{praiseOpacity}}"><text class="indicatrix"></text></text>
+
+          <view class="store-req" wx:for="{{storeList}}">
+            <view class="store-list">
+                <text class="place-name">{{item.name}}</text>
+                <text class="place-star"><text class="star" style="background:url('https://mall.helinju.cn/data/files/miniapps/images/star_l_y@3x.png') no-repeat; background-size:100%;" wx:for="{{item.star_num}}"></text><text class="star" style="background:url('https://mall.helinju.cn/data/files/miniapps/images/star_l_yk@3x.png') no-repeat;background-size:100%;" wx:for="{{5 - item.star_num}}"></text></text>
+                <text class="place-distance">距离你:{{item.distance}}</text>
+                <text class="phone" style="background:url('https://mall.helinju.cn/data/files/miniapps/images/电话@3x.png') no-repeat; background-size: 100%;" data-phone="{{item.tel}}" bindtap="callMe"></text>
+            </view>
+
+            <view class="store-address">
+              <text class="place-address" style="background:url('https://mall.helinju.cn/data/files/miniapps/images/landmark.png') no-repeat;background-size: 30rpx 40rpx; background-position: 20rpx;">{{item.address}}</text>
+            </view>
+          </view>
+      </view>
+</view>
+

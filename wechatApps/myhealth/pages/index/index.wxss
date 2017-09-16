@@ -1,0 +1,90 @@
+/**index.wxss**/
+.container { display: flex; background: #F3F4F3; }
+view { background: white; }
+.swiper { height: 400rpx; width: 100%; }
+.swiper image { height: 100%; width: 100%; }
+.icon-list { width: 100%; height: 400rpx; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 30rpx 0 0rpx 52rpx; }
+.icons { width: 160rpx; height: 200rpx; }
+.icon { width: 120rpx; height: 120rpx; display: block; }
+.icon-text { font-size: 24rpx; margin-left: 10rpx; }
+
+.health { width: 100%; height: 110rpx; padding-bottom: 20rpx; }
+.health-img { width: 100rpx; height: 100rpx; margin-left: 30rpx; display: block; float: left; }
+.health-message { width: 600rpx; height: 100rpx; overflow: hidden; position: absolute; margin-left: 160rpx; }
+.health-roll { font-size: 22rpx; display: block; height: 50rpx; line-height: 50rpx; }
+.roll-title { widht: 50rpx; height: 30rpx; border: 1px solid red; border-radius: 3px; padding: 0px 10rpx; font-size: 19rpx; margin-right: 10rpx; }
+
+.expand { width: 100%; margin: 20rpx 0rpx; padding: 20rpx 0 5rpx 0; height:  156rpx; }
+.expand-imgl { width: 120rpx; height: 120rpx; display: inline-block; float: left; margin-left: 30rpx; }
+.expand .line { display: inline-block; height: 100rpx; border: 1px solid #F5F6F5; float: left; margin: 20rpx 30rpx; }
+.expand .title { display: inline-block; widht: 300rpx; height: 100rpx; float: left; padding-top: 20rpx;  }
+.expand .btitle { font-size: 36rpx; color: #41BA5E; display: block; }
+.expand .stitle { font-size: 28rpx; }
+.expand-goodsImg { width: 120rpx; height: 120rpx; display: inline-block; float: right; margin: 10rpx; margin-right: 50rpx; }
+
+.list { widht: 100%; height: 448rpx; background: #F3F4F3; display: flex; justify-content: space-between; flex-wrap: wrap; }
+.list-son { width: 374rpx; height: 222rpx; }
+.list-imgs { display: inline-block; width: 187rpx; height: 222rpx; }
+.list-goods { display: inline-block; width: 187rpx; height: 222rpx; }
+
+.selection { width: 100%; margin-top: 10rpx; }
+.subject { margin: 14rpx 0 5rpx 0; width: 100%; height: 70rpx; }
+.green-icon { display: inline-block; width:20rpx; height: 60rpx; background: #25B147; margin-right: 20rpx; float: left; }
+.subject-title { display:inline-block; float: left; margin-top: 10rpx; font-weight: 300; }
+.selection-banner { width: 100%; height: 200rpx; padding: 70rpx 0; }
+.selection-son { width: 500rpx; height: 200rpx; margin: auto; background-color: rgba(255, 255, 255, 0.8); text-align: center; padding: 0 30rpx; }
+.selection-title { display: block; width: 300rpx; height: 50rpx; background: black; line-height: 50rpx; text-align: center; color: white; font-size: 28rpx; margin: 0 auto; font-weight: 100; text-indent: 5rpx; }
+.selection-article { display: inline-block; margin-top: 42rpx; font-size: 38rpx; font-weight: bold; }
+.triangle { display: inline-block; width: 0; height: 0; border-left: 26rpx solid transparent; border-right: 26rpx solid transparent; border-bottom: 30rpx solid white; position: absolute; margin-left: 100rpx; margin-top: -22rpx; }
+.selection-goods { height: 360rpx; margin: 20rpx 0; white-space: nowrap; }
+.goods { display: inline-block; width: 200rpx; height: 280rpx; text-align: center; margin: 0 10rpx; }
+.goods-img { display: inline-block; width: 200rpx; height: 200rpx; }
+.goods-name { display: block; text-overflow: ellipsis; width: 200rpx; height: 66rpx; font-size: 24rpx; text-align: left;  white-space: pre-wrap; overflow: hidden; }
+.goods-price { font-size: 24rpx; color: red; }
+
+::-webkit-scrollbar { width: 0; height: 0; color: transparent; } 
+::-moz-scrollbar { width: 0; height: 0; color: transparent; } 
+
+.place-title { width: 100%; height: 80rpx; margin-top: 20rpx; padding-top: 16rpx; }
+.place { width: 100%; min-height: 600rpx; margin-top: 5rpx; }
+.place-list { display: inline-block; float: right; font-size: 28rpx; height: 60rpx; line-height: 60rpx; color: #959695;  margin-right: 10rpx; font-weight: 300; }
+
+.address { width: 100%; height: 90rpx; text-align: center; padding: 6rpx; font-size: 28rpx; color: #6C6D6C; margin-top: 4rpx; }
+.search { display: block; width: 40rpx; height: 40rpx;  position: absolute; margin-top: 20rpx; margin-left: 20rpx; }
+map { width: 100%; height: 680rpx; }
+.nowlocation{ display: block; width: 200rpx; margin: 0 auto; font-size: 30rpx; color: #199FFF; }
+.points { display: block; width: 38rpx; height: 38rpx; border-radius: 50%; background: white; position: absolute; z-index: 10; text-align: center; line-height: 36rpx; margin-top: -38rpx; }
+.points text { display: inline-block; width: 30rpx; height: 30rpx; border-radius: 50%; background: green; }
+
+.place-store { background: #F3F4F3; width: 100%; min-height: 684rpx; margin-top: 2rpx; }
+
+.order-title { width: 100%; height: 60rpx; background: white; }
+.orderby { display: inline-block; width: 33%; height: 56rpx; text-align: center; font-size: 28rpx; line-height: 56rpx; color: #767776; font-weight: 100; }
+.order-line { display: inline-block; width:0; height: 28rpx; border-left: 1rpx solid #9C9F9F; }
+
+.indica { display: block; width: 20%; height: 56rpx; float: left; position: absolute; margin: -56rpx 0rpx 0rpx 0rpx; line-height: 86rpx; text-align: center; }
+.indica:nth-of-type(1) { margin-left: 42rpx; }
+.indica:nth-of-type(2) { margin-left: 292rpx; }
+.indica:nth-of-type(3) { margin-left: 544rpx; }
+
+.indicatrix { display: inline-block; width: 100%; height: 4rpx; background: #25B147; }
+
+.store-req { width: 100%; height: 208rpx; margin-top: 10rpx; background: #F3F4F3; }
+.store-list { width: 100%; height: 88rpx; padding: 20rpx; }
+.place-star { display: inline-block; width: 200rpx; height: 50rpx; }
+.star { display: inline-block; width: 28rpx; height: 28rpx; }
+.place-distance { font-size: 24rpx; margin-left: 60rpx; color: #B0B1B0; font-weight: 300; }
+.phone { display: inline-block; width: 40rpx; height: 40rpx; position: absolute; left: 660rpx; margin-top: -20rpx; } 
+.store-address { width: 100%; height: 74rpx; margin-top: 4rpx; }
+
+.place-name { display: block; font-size: 32rpx; color: #494A49; }
+.place-address { display: block; font-size: 24rpx; color: #494A49; padding-left: 70rpx; height: 74rpx; line-height: 70rpx; }
+
+
+
+
+
+
+
+
+
